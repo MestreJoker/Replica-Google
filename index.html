@@ -30,13 +30,16 @@
             grid-template-rows: 20px 51px 1fr 94px;
             grid-template-columns: 1fr;
         }
-        #aviso{
+
+        #aviso {
             grid-area: aviso;
-    font-size: 0.7em;
+            font-size: 0.7em;
             margin: auto;
         }
+
         header {
             grid-area: header;
+            background-color: black;
         }
 
         main {
@@ -45,20 +48,54 @@
             flex-direction: column;
             align-items: center;
         }
-        #barraPesquisa{
+
+        #barraPesquisa {
             height: 52px;
             width: 80%;
             max-width: 584px;
-            background-color: red;
             border-radius: 60px;
+            border: 1px solid #dbdce0;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.11);
+            display: flex;
+            margin-top: 20px;
         }
-        #botoesMain{
+        #lupaBackground{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        textarea{
+            width: 69%;
+            min-height: 100%;
+            overflow-y: hidden;
+            resize: none;
+            outline: none;
+            border: solid transparent;
+            padding-top: auto;
+            font-size: 17px;
+            padding: 10px;
+            background-color: transparent;
+        }
+        #iconsPesquisabackground{
+            flex: 3;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            max-height: 100%;
+        }
+        .icon{
+            height: 40%;
+        }
+        #botoesMain {
             height: 38px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
+            margin-top: 30px;
         }
-        .botaoMain{
+
+        .botaoMain {
             height: 100%;
             width: 141px;
             background-color: #f8f9fa;
@@ -66,17 +103,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 14px;
         }
+
         footer {
             grid-area: footer;
             background-color: #f2f2f2;
+            position: fixed;
+            bottom: 0;
+            height: 94px;
+            width: 100%;
         }
-        #footerSuperior{
+
+        #footerSuperior {
             border-bottom: 1px solid #dbdce0;
             height: 50%;
         }
-        #footerInferior{
+
+        #footerInferior {
             height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+        #footerInferior p{
+            font-size: 0.7em;
+            color: gray;
         }
     </style>
 </head>
@@ -85,7 +139,9 @@
     <div id="content">
         <div id="aviso">
             <p>
-                <strong style="color: red">DISCLAIMER:</strong> THIS PAGE IS A PERSONAL EDUCATIONAL PROJECT. IT IS NOT AFFILIATED WITH THE ORIGINAL COMPANY OR BRAND, NOR IS IT A PAGE WITH PHISING PURPOSES, IT IS A STATIC PAGE. <b>ALWAYS CHECK THE URL</b>
+                <strong style="color: red">DISCLAIMER:</strong> THIS PAGE IS A PERSONAL EDUCATIONAL PROJECT. IT IS NOT
+                AFFILIATED WITH THE ORIGINAL COMPANY OR BRAND, NOR IS IT A PAGE WITH PHISING PURPOSES, IT IS A STATIC
+                PAGE. <b>ALWAYS CHECK THE URL</b>
             </p>
         </div>
         <header>
@@ -96,7 +152,19 @@
             <div id="imageBackground">
                 <img id="logoGoogle" src="images/googleImage.png" alt="Imagem da logo do Google">
             </div>
-            <div id="barraPesquisa"></div>
+            <div id="barraPesquisa">
+                <div id="lupaBackground">
+                    <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 40%;"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                </div>
+                <textarea rows="1"></textarea>
+                <div id="iconsPesquisabackground">
+                    <svg class="icon" aria-hidden="true" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg"><path fill="var(--bbQxAb)" d="M160-200q-33 0-56.5-23.5T80-280v-400q0-33 23.5-56.5T160-760h640q33 0 56.5 23.5T880-680v400q0 33-23.5 56.5T800-200H160Zm160-120h320v-80H320v80ZM200-440h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80ZM200-560h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Z"></path></svg>
+
+                    <svg class="goxjub icon" aria-hidden="true" focusable="false" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path fill="var(--bbQxAb)" d="M480-400q-50 0-85-35t-35-85v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q0 50-35 85t-85 35Zm-40 280v-123q-104-14-172-93t-68-184h80q0 83 58.5 141.5T480-320q83 0 141.5-58.5T680-520h80q0 105-68 184t-172 93v123h-80Z"></path></svg>
+
+                    <svg class="Gdd5U icon" aria-hidden="true" focusable="false" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path fill="var(--bbQxAb)" d="M480-320q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm240 160q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160Zm-440 40q-66 0-113-47t-47-113v-80h80v80q0 33 23.5 56.5T280-200h200v80H280Zm480-320v-160q0-33-23.5-56.5T680-680H280q-33 0-56.5 23.5T200-600v120h-80v-120q0-66 47-113t113-47h80l40-80h160l40 80h80q66 0 113 47t47 113v160h-80Z"></path></svg>
+                </div>
+            </div>
             <div id="botoesMain">
                 <div class="botaoMain">Pesquisa Google</div>
                 <div class="botaoMain">Estou com sorte</div>
@@ -105,7 +173,14 @@
 
         <footer>
             <div id="footerSuperior"></div>
-            <div id="footerInferior"></div>
+            <div id="footerInferior">
+                <p>
+                    This is <b>not</b> the official page. It is merely a replica for educational purposes and is not intended for phishing. Be careful not to fall for scams, always check the URL.
+                </p>
+                <p>
+                    Essa <b>não</b> é a página oficial. É apenas uma réplica para fins educacionais, não tem como intenção o phishing. Cuidado para não cair em golpes, sempre verifique a URL.
+                </p>
+            </div>
         </footer>
     </div>
 
