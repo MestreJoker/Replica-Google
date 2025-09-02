@@ -5,7 +5,7 @@ This page is a personal educational project created solely for learning and prac
 Esta página é um projeto educacional pessoal, criado exclusivamente para fins de estudo e prática. Não se trata do site oficial do Google, nem possui qualquer afiliação com o Google ou seus parceiros. O objetivo deste projeto é estudar e demonstrar técnicas de desenvolvimento web, e não tem como finalidade replicar o Google para fins maliciosos, comerciais ou enganosos. Todo o conteúdo, design e funcionalidades foram criados de forma independente pelo autor, apenas para uso educacional.
 
 <h3>Veja o site em:</h3>
-<p>mestrejoker.github.io/Replica-Instagram</p>
+<p>mestrejoker.github.io/Replica-Google</p>
 
 <h1>Réplica do Google - Projeto Educacional</h1>
 Bem-vindo ao meu projeto de réplica do Google! Este é um protótipo web criado por mim como um exercício educacional para aprimorar habilidades em desenvolvimento front-end, sem qualquer afiliação com a marca original.
