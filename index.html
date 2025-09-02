@@ -39,7 +39,53 @@
 
         header {
             grid-area: header;
-            background-color: black;
+            padding-right: 10px;
+        }
+
+        #linksHeader {
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #linksHeader a {
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+        }
+
+        #linksHeader a:hover {
+            text-decoration: underline;
+        }
+
+        #menuHeader {
+            height: 75%;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        #menuHeader:hover {
+            background-color: #e2e3e3;
+            cursor: pointer;
+        }
+
+        #buttonLogin {
+            width: 94px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 60px;
+        }
+
+        #buttonLogin:hover {
+            cursor: pointer;
+            background-color: rgb(0, 0, 224);
         }
 
         main {
@@ -59,13 +105,15 @@
             display: flex;
             margin-top: 20px;
         }
-        #lupaBackground{
+
+        #lupaBackground {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        textarea{
+
+        textarea {
             width: 69%;
             min-height: 100%;
             overflow-y: hidden;
@@ -77,16 +125,23 @@
             padding: 10px;
             background-color: transparent;
         }
-        #iconsPesquisabackground{
+
+        #iconsPesquisabackground {
             flex: 3;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             max-height: 100%;
         }
-        .icon{
-            height: 40%;
+
+        .icon {
+            height: 50%;
         }
+
+        .icon:hover {
+            cursor: pointer;
+        }
+
         #botoesMain {
             height: 38px;
             display: flex;
@@ -106,6 +161,13 @@
             font-size: 14px;
         }
 
+        .botaoMain:hover {
+            border-width: 1px 1px 2px 1px;
+            border-style: solid;
+            border-color: #dbdce0;
+            cursor: pointer;
+        }
+
         footer {
             grid-area: footer;
             background-color: #f2f2f2;
@@ -118,6 +180,10 @@
         #footerSuperior {
             border-bottom: 1px solid #dbdce0;
             height: 50%;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            color: #1f1f1f;
         }
 
         #footerInferior {
@@ -128,9 +194,38 @@
             align-items: center;
             padding: 5px;
         }
-        #footerInferior p{
+
+        #footerInferior p {
             font-size: 0.7em;
             color: gray;
+        }
+        @media (max-width: 777px){
+            footer{
+                height: auto;
+            }
+        }
+        @media (max-width: 609px) {
+            #aviso{
+                font-size: 0.5em;
+            }
+        }
+        @media (max-width: 491px) {
+            #logoGoogle{
+                width: 150px;
+            }
+        }
+        @media (max-width: 433px) {
+            header, main{
+                margin-top: 20px;
+            }
+            #aviso{
+                font-size: 0.4em;
+            }
+        }
+        @media (max-width: 390px) {
+            #barraPesquisa svg{
+                height: 30%;
+            }
         }
     </style>
 </head>
@@ -145,7 +240,24 @@
             </p>
         </div>
         <header>
+            <div id="linksHeader">
+                <a href="#">Gmail</a>
+                <a href="#">Imagens</a>
 
+                <div id="menuHeader">
+                    <svg class="gb_F" focusable="false" viewBox="0 0 24 24" style="height: 55%;">
+                        <path
+                            d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                        </path>
+                        <image src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="" height="24" width="24"
+                            style="border:none;display:none \9"></image>
+                    </svg>
+                </div>
+
+                <a href="#">
+                    <button id="buttonLogin">Fazer login</button>
+                </a>
+            </div>
         </header>
 
         <main>
@@ -154,15 +266,35 @@
             </div>
             <div id="barraPesquisa">
                 <div id="lupaBackground">
-                    <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 40%;"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                    <svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        style="height: 40%;">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                        </path>
+                    </svg>
                 </div>
                 <textarea rows="1"></textarea>
                 <div id="iconsPesquisabackground">
-                    <svg class="icon" aria-hidden="true" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg"><path fill="var(--bbQxAb)" d="M160-200q-33 0-56.5-23.5T80-280v-400q0-33 23.5-56.5T160-760h640q33 0 56.5 23.5T880-680v400q0 33-23.5 56.5T800-200H160Zm160-120h320v-80H320v80ZM200-440h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80ZM200-560h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Z"></path></svg>
+                    <svg class="icon" aria-hidden="true" height="24px" viewBox="0 -960 960 960" width="24px"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="var(--bbQxAb)"
+                            d="M160-200q-33 0-56.5-23.5T80-280v-400q0-33 23.5-56.5T160-760h640q33 0 56.5 23.5T880-680v400q0 33-23.5 56.5T800-200H160Zm160-120h320v-80H320v80ZM200-440h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80ZM200-560h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Z">
+                        </path>
+                    </svg>
 
-                    <svg class="goxjub icon" aria-hidden="true" focusable="false" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path fill="var(--bbQxAb)" d="M480-400q-50 0-85-35t-35-85v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q0 50-35 85t-85 35Zm-40 280v-123q-104-14-172-93t-68-184h80q0 83 58.5 141.5T480-320q83 0 141.5-58.5T680-520h80q0 105-68 184t-172 93v123h-80Z"></path></svg>
+                    <svg class="goxjub icon" aria-hidden="true" focusable="false" viewBox="0 -960 960 960"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="var(--bbQxAb)"
+                            d="M480-400q-50 0-85-35t-35-85v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q0 50-35 85t-85 35Zm-40 280v-123q-104-14-172-93t-68-184h80q0 83 58.5 141.5T480-320q83 0 141.5-58.5T680-520h80q0 105-68 184t-172 93v123h-80Z">
+                        </path>
+                    </svg>
 
-                    <svg class="Gdd5U icon" aria-hidden="true" focusable="false" viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg"><path fill="var(--bbQxAb)" d="M480-320q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm240 160q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160Zm-440 40q-66 0-113-47t-47-113v-80h80v80q0 33 23.5 56.5T280-200h200v80H280Zm480-320v-160q0-33-23.5-56.5T680-680H280q-33 0-56.5 23.5T200-600v120h-80v-120q0-66 47-113t113-47h80l40-80h160l40 80h80q66 0 113 47t47 113v160h-80Z"></path></svg>
+                    <svg class="Gdd5U icon" aria-hidden="true" focusable="false" viewBox="0 -960 960 960"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="var(--bbQxAb)"
+                            d="M480-320q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm240 160q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160Zm-440 40q-66 0-113-47t-47-113v-80h80v80q0 33 23.5 56.5T280-200h200v80H280Zm480-320v-160q0-33-23.5-56.5T680-680H280q-33 0-56.5 23.5T200-600v120h-80v-120q0-66 47-113t113-47h80l40-80h160l40 80h80q66 0 113 47t47 113v160h-80Z">
+                        </path>
+                    </svg>
                 </div>
             </div>
             <div id="botoesMain">
@@ -172,13 +304,17 @@
         </main>
 
         <footer>
-            <div id="footerSuperior"></div>
+            <div id="footerSuperior">
+                <p style="font-size: 15px;">Brasil</p>
+            </div>
             <div id="footerInferior">
                 <p>
-                    This is <b>not</b> the official page. It is merely a replica for educational purposes and is not intended for phishing. Be careful not to fall for scams, always check the URL.
+                    This is <b>not</b> the official page. It is merely a replica for educational purposes and is not
+                    intended for phishing. Be careful not to fall for scams, always check the URL.
                 </p>
                 <p>
-                    Essa <b>não</b> é a página oficial. É apenas uma réplica para fins educacionais, não tem como intenção o phishing. Cuidado para não cair em golpes, sempre verifique a URL.
+                    Essa <b>não</b> é a página oficial. É apenas uma réplica para fins educacionais, não tem como
+                    intenção o phishing. Cuidado para não cair em golpes, sempre verifique a URL.
                 </p>
             </div>
         </footer>
